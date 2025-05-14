@@ -3,11 +3,6 @@ class Bowling
     attr_accessor :score
     attr_accessor :pin
 
-    #def initialize(name:, score:)
-        #self.name = name
-        #self.score = score
-   # end 
-
     def name_ask
         puts "ニックネームを入力してください"
         name = gets.chomp
@@ -51,13 +46,3 @@ class Bowling
     end
 
 end
-
-
-
-
-
-    #def score_info(name,score)
-        #puts "-------------------------"
-        #puts "| #{name} さんのスコア : #{score} |"
-        #puts "-------------------------"
-    #end
