@@ -1,18 +1,21 @@
 class Bowling
-    attr_accessor :name
-    attr_accessor :score
-    attr_accessor :pin
+    attr_accessor :name, :score, :pin
+
+    def initialize
+        @name = name 
+        @score = 0
+    end
 
     def name_ask
         puts "ニックネームを入力してください"
-        name = gets.chomp
-        puts "#{name}さん ですね？ (はいorいいえ)"
+        @name = gets.chomp
+        puts "#{@name}さん ですね？ (はいorいいえ)"
         name_correct = gets.chomp
     
         if name_correct != "はい"
             return name_ask
         else
-            puts "#{name}さん、それではゲームを開始します！"
+            puts "#{@name}さん、それではゲームを開始します！"
         end
     end
 
@@ -29,8 +32,8 @@ class Bowling
             pin = 10 - Random.rand(1..10)
             puts "#{pin}本残りました"
             index += 1
-            score += (10 - pin)
-            puts "#{index}回目のスコア: #{score}"
+            @score += (10 - pin)
+            puts "#{index}回目のスコア: #{@score}"
             puts "-------------------"
             return test_game(index,pin,score)
         else
@@ -41,7 +44,7 @@ class Bowling
 
     def score_info(name,score)
         puts "-------------------------"
-        puts "| #{name} さんのスコア : #{score} |"
+        puts "| #{@name} さんのスコア : #{@score} |"
         puts "-------------------------"
     end
 
