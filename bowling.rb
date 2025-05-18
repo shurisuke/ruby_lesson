@@ -42,7 +42,7 @@ class Bowling
         end
     end
 
-    def score_info(name,score)
+    def score_info
         puts "-------------------------"
         puts "| #{@name} さんのスコア : #{@score} |"
         puts "-------------------------"
