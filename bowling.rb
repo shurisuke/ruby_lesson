@@ -1,7 +1,7 @@
 class Bowling
     attr_accessor :name, :score, :pin
 
-    def initialize
+    def initialize(name: '', score: 0)      
         @name = name 
         @score = 0
     end
